@@ -1,0 +1,34 @@
+,match_id,team,against,h_a,minute,player,outcome,distance,body_part,notes,sca1_player,sca1_event,sca2_player,sca2_event
+0,7794fd6c,Newcastle Utd,Manchester Utd,away,7,Joelinton,Off Target,19.0,Right Foot,,Joelinton,Dribble,Allan Saint-Maximin,Pass (Live)
+1,7794fd6c,Manchester Utd,Newcastle Utd,home,9,Cristiano Ronaldo,Off Target,9.0,Left Foot,,,,,
+2,7794fd6c,Manchester Utd,Newcastle Utd,home,11,Cristiano Ronaldo,Off Target,13.0,Left Foot,,Jadon Sancho,Pass (Live),Cristiano Ronaldo,Pass (Live)
+3,7794fd6c,Newcastle Utd,Manchester Utd,away,15,Matt Ritchie,Blocked,26.0,Left Foot,,Allan Saint-Maximin,Pass (Live),Miguel Almirón,Pass (Live)
+4,7794fd6c,Manchester Utd,Newcastle Utd,home,19,Raphaël Varane,Off Target,7.0,Head,,Luke Shaw,Pass (Dead),Luke Shaw,Pass (Live)
+5,7794fd6c,Manchester Utd,Newcastle Utd,home,23,Cristiano Ronaldo,Blocked,24.0,Left Foot,,Mason Greenwood,Pass (Live),Paul Pogba,Pass (Live)
+6,7794fd6c,Newcastle Utd,Manchester Utd,away,23,Miguel Almirón,Blocked,27.0,Left Foot,,,,,
+7,7794fd6c,Newcastle Utd,Manchester Utd,away,23,Matt Ritchie,Saved,25.0,Left Foot,Deflected,Miguel Almirón,Shot,,
+8,7794fd6c,Manchester Utd,Newcastle Utd,home,26,Bruno Fernandes,Off Target,63.0,Right Foot,Lob,Jadon Sancho,Pass (Dead),,
+9,7794fd6c,Newcastle Utd,Manchester Utd,away,28,Joe Willock,Off Target,12.0,Right Foot,Half volley,Joe Willock,Dribble,,
+10,7794fd6c,Manchester Utd,Newcastle Utd,home,29,Bruno Fernandes,Off Target,33.0,Right Foot,,Nemanja Matić,Pass (Live),Jadon Sancho,Pass (Live)
+11,7794fd6c,Manchester Utd,Newcastle Utd,home,30,Bruno Fernandes,Blocked,29.0,Right Foot,,Cristiano Ronaldo,Pass (Live),Jadon Sancho,Pass (Live)
+12,7794fd6c,Manchester Utd,Newcastle Utd,home,30,Jadon Sancho,Off Target,14.0,Left Foot,,Bruno Fernandes,Shot,,
+13,7794fd6c,Manchester Utd,Newcastle Utd,home,32,Jadon Sancho,Blocked,17.0,Right Foot,,Bruno Fernandes,Pass (Live),Mason Greenwood,Pass (Live)
+14,7794fd6c,Manchester Utd,Newcastle Utd,home,32,Harry Maguire,Saved,10.0,Head,,Luke Shaw,Pass (Dead),Jadon Sancho,Shot
+15,7794fd6c,Newcastle Utd,Manchester Utd,away,36,Allan Saint-Maximin,Off Target,27.0,Right Foot,,Ciaran Clark,Pass (Live),,
+16,7794fd6c,Manchester Utd,Newcastle Utd,home,39,Cristiano Ronaldo,Blocked,9.0,Right Foot,,Nemanja Matić,Pass (Live),David de Gea,Pass (Live)
+17,7794fd6c,Manchester Utd,Newcastle Utd,home,43,Nemanja Matić,Blocked,29.0,Left Foot,,Aaron Wan-Bissaka,Pass (Live),Nemanja Matić,Pass (Live)
+18,7794fd6c,Manchester Utd,Newcastle Utd,home,45+2,Mason Greenwood,Saved,24.0,Left Foot,Deflected,Paul Pogba,Pass (Live),Nemanja Matić,Pass (Live)
+19,7794fd6c,Manchester Utd,Newcastle Utd,home,45+2,Cristiano Ronaldo,Goal,3.0,Right Foot,Open goal,Mason Greenwood,Shot,,
+21,7794fd6c,Manchester Utd,Newcastle Utd,home,54,Nemanja Matić,Off Target,31.0,Left Foot,,Mason Greenwood,Pass (Live),Aaron Wan-Bissaka,Pass (Live)
+22,7794fd6c,Newcastle Utd,Manchester Utd,away,56,Javier Manquillo,Goal,11.0,Right Foot,,Allan Saint-Maximin,Pass (Live),Miguel Almirón,Pass (Live)
+23,7794fd6c,Manchester Utd,Newcastle Utd,home,59,Bruno Fernandes,Blocked,23.0,Right Foot,,Mason Greenwood,Pass (Live),,
+24,7794fd6c,Manchester Utd,Newcastle Utd,home,62,Cristiano Ronaldo,Goal,13.0,Right Foot,,Luke Shaw,Pass (Live),Paul Pogba,Pass (Live)
+25,7794fd6c,Manchester Utd,Newcastle Utd,home,66,Raphaël Varane,Off Target,9.0,Head,,Luke Shaw,Pass (Dead),Jadon Sancho,Pass (Live)
+26,7794fd6c,Newcastle Utd,Manchester Utd,away,67,Joelinton,Saved,13.0,Right Foot,,Matt Ritchie,Pass (Live),Joelinton,Pass (Live)
+27,7794fd6c,Newcastle Utd,Manchester Utd,away,69,Allan Saint-Maximin,Off Target,33.0,Right Foot,,Allan Saint-Maximin,Dribble,Miguel Almirón,Pass (Live)
+28,7794fd6c,Manchester Utd,Newcastle Utd,home,76,Mason Greenwood,Blocked,19.0,Right Foot,,Mason Greenwood,Dribble,,
+29,7794fd6c,Newcastle Utd,Manchester Utd,away,79,Allan Saint-Maximin,Blocked,26.0,Right Foot,,Matt Ritchie,Pass (Live),,
+30,7794fd6c,Newcastle Utd,Manchester Utd,away,80,Jacob Murphy,Saved,32.0,Left Foot,,,,,
+31,7794fd6c,Manchester Utd,Newcastle Utd,home,80,Bruno Fernandes,Goal,26.0,Right Foot,,Paul Pogba,Pass (Live),Mason Greenwood,Pass (Live)
+32,7794fd6c,Newcastle Utd,Manchester Utd,away,87,Joelinton,Wayward,10.0,Head,,Allan Saint-Maximin,Pass (Live),Jacob Murphy,Pass (Live)
+33,7794fd6c,Manchester Utd,Newcastle Utd,home,90+2,Jesse Lingard,Goal,14.0,Right Foot,,Anthony Martial,Pass (Live),Paul Pogba,Pass (Live)
