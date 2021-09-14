@@ -384,7 +384,7 @@ def process_matches(match_data, league_dir):
                 v['squad_b'],
                 v['match_id'],
                 league_dir + '/shot_data/' + shots_name
-            )`
+            )
 
 def process_league(soup):
     season = soup.find('h2').find('span').text.split(' ')[0]
@@ -427,22 +427,6 @@ def process_league(soup):
 
         for field in match:
             match_data[match_num][field['data-stat']] = field.text
-            
-        # find result
-        try:
-            score = match_data[match_num]['score']
-            home = int(score[0])
-            away = int(score[-1])
-        except:
-            # game is not finished yet, so break out
-            del match_data[match_num]
-            break
-        
-        result = 'a' if home > away else 'b'
-        result = 'draw' if home == away else result
-        
-        # insert result
-        match_data[match_num]['result'] = result
         
         match_num += 1
 
