@@ -1,0 +1,44 @@
+some project
+
+-- 20210827: roadmap v1
+get vm from digital ocean or aws idk 
+watch aws fundamentals video
+create database on aws redshift or whatever is used
+create airflow jobs to extract some data
+create a web app to show said data
+do some modelling maybe
+
+-- 20210828: decisions
+use ec2 instance, probably memory optimized bc i'll be doing a lot of etl
+maybe airflow isn't the best idea bc of the cost, (7-10$ a day), might be better off using crons
+
+-- 20210829: what data to scrape
+let's scrape fbref data
+
+-- 20210831
+create db to hold data (redshift or rds which service to use)
+
+-- 20210901
+so to optimize costs, i can develop on my local machine and pull the changes from the ec2 instance
+the ec2 instance will run the job when i want it to after pulling the most recent changes
+can do this with a setup script?
+first thing to do is to create a rds instance bc it's cheaper than redshift
+
+-- 20210908
+ec2 might not be a go here, because i only need to run the docker container to do it's thing as an application
+instead i could use ecs instead depending on if i'll be able to talk to a database outside through it
+
+-- 20210913
+i think instead of doing this much planning, it would be better just to do something
+so for now i'll just upload csv files to s3
+format:
+bucket - ykfbref
+-> pl_2020_21
+--> shot_data
+---> home_away_shots.csv
+--> player_data
+---> home_away_player.csv
+--> keeper_data.csv
+---> home_away_keeper.csv
+
+still need match description data but it's not super necessary, this could just be a simple excel file
