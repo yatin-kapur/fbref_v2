@@ -37,8 +37,8 @@ bucket - ykfbref
 --> shot_data
 ---> home_away_shots.csv
 --> player_data
----> home_away_player.csv
+---> home_away_players.csv
 --> keeper_data.csv
----> home_away_keeper.csv
+---> home_away_keepers.csv
 
 still need match description data but it's not super necessary, this could just be a simple excel file
