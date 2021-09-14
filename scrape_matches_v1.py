@@ -207,14 +207,14 @@ KEEPER_COLS = [
     "save_pct",
     "psxg_gk",
     "passes_completed_launched_gk",
-    "passes_launched_gk"
+    "passes_launched_gk",
     "passes_pct_launched_gk",
     "passes_gk",
     "passes_throws_gk",
     "pct_passes_launched_gk",
     "passes_length_avg_gk",
     "goal_kicks",
-    "pcg_goal_kicks_launched",
+    "pct_goal_kicks_launched",
     "goal_kick_length_avg",
     "crosses_gk",
     "crosses_stopped_gk",
@@ -226,10 +226,11 @@ KEEPER_COLS = [
 SHOT_COLS = [
     "minute",
     "player",
-    "squad",
+    "team",
     "outcome",
     "distance",
     "body_part",
+    "notes",
     "sca1_player",
     "sca1_event",
     "sca2_player",
@@ -238,6 +239,7 @@ SHOT_COLS = [
 
 TABLE_COLS = [SUM_COLS, PASS_COLS, PASS_TYPE_COLS, DEF_COLS, POSS_COLS, MISC_COLS]
 
+###############################################################################
 # s3 functions for help 
 def s3_loaded_data(league_dir, directory):
     search_dir = league_dir + "/" + directory + "/"
@@ -249,26 +251,64 @@ def s3_loaded_data(league_dir, directory):
 
     return s3_checked
 
-def process_keepers(home_table, away_table, home_team, away_team, match_id, league):
-    pass
+def upload_df_to_s3(df, file_name):
+    # upload to s3
+    print('uploading... {} to S3'.format(file_name))
+    csv_buffer = StringIO()
+    df.to_csv(csv_buffer)
+    S3.Object(BUCKET, file_name).put(Body=csv_buffer.getvalue())
+###############################################################################
 
-def process_shots(shots_table, match_id, league):
-    pass
+###############################################################################
+def process_shots(table, home_team, away_team, match_id, file_name):
+    shots_table = table.copy(deep=True)
+    shots_table.columns = SHOT_COLS
+    shots_table = shots_table[shots_table['minute'].notna()]
+    shots_table.loc[:, 'match_id'] = match_id
 
-# helper for processing home and away data for players
+    shots_table['against'] = shots_table.apply(lambda row: home_team if row['team'] == away_team else away_team, axis=1)
+    shots_table['h_a'] = shots_table.apply(lambda row: 'home' if row['team'] == home_team else 'away', axis=1)
+
+    # SHOT_COLS has team column at index 2, we don't want it twice 
+    shots_table = shots_table[DATA_COLS + SHOT_COLS[:2] + SHOT_COLS[3:]]
+
+    upload_df_to_s3(shots_table, file_name)
+###############################################################################
+
+###############################################################################
+def build_keeper_df(table, match_id, team, against, h_a):
+    keeper = table.copy(deep=True)
+    keeper.columns = KEEPER_COLS
+    keeper.loc[:, 'match_id'] = match_id
+    keeper.loc[:, 'team'] = team
+    keeper.loc[:, 'against'] = against
+    keeper.loc[:, 'h_a'] = h_a
+    keeper = keeper[DATA_COLS + KEEPER_COLS]
+
+    return keeper
+
+def process_keepers(home_table, away_table, home_team, away_team, match_id, file_name):
+    home_df = build_keeper_df(home_table, match_id, home_team, away_team, 'home')
+    away_df = build_keeper_df(away_table, match_id, away_team, home_team, 'away')
+
+    player_df = pd.concat([home_df, away_df], ignore_index=True)
+    
+    upload_df_to_s3(player_df, file_name)
+###############################################################################
+
+###############################################################################
 def build_player_df(tables, match_id, team, against, h_a):
     df = pd.DataFrame()
     for i, t in enumerate(tables):
-        table = t[:-1] # remove last row because it's an aggregated row
+        table = t.iloc[:-1].copy(deep=True) # remove last row because it's an aggregated row
         table.columns = PLAYER_COLS + TABLE_COLS[i]
 
         if i == 0:
             df = table
-            n = len(df)
-            df['match_id'] = [match_id] * n
-            df['team'] = [team] * n
-            df['against'] = [against] * n
-            df['h_a'] = [h_a] * n
+            df.loc[:, 'match_id'] = match_id
+            df.loc[:, 'team'] = team
+            df.loc[:, 'against'] = against
+            df.loc[:, 'h_a'] = h_a
 
             df = df[DATA_COLS + PLAYER_COLS + TABLE_COLS[i]]
         else:
@@ -288,11 +328,8 @@ def process_players(home_tables, away_tables, home_team, away_team, match_id, fi
 
     player_df = pd.concat([home_df, away_df], ignore_index=True)
     
-    # upload to s3
-    print('uploading... {} to S3'.format(file_name))
-    csv_buffer = StringIO()
-    player_df.to_csv(csv_buffer)
-    S3.Object(BUCKET, file_name).put(Body=csv_buffer.getvalue())
+    upload_df_to_s3(player_df, file_name)
+###############################################################################
 
 def process_matches(match_data, league_dir):
     # check which matches have been already processed
@@ -301,32 +338,53 @@ def process_matches(match_data, league_dir):
     s3_shots = s3_loaded_data(league_dir, 'shot_data')
 
     for k, v in match_data.items():
+        match_index = str(k + 1).zfill(3)
         home = ''.join(v['squad_a'].split(' '))
         away = ''.join(v['squad_b'].split(' '))
 
         # file names for s3
-        players_name = home + '_' + away + '_players.csv'
-        keepers_name = home + '_' + away + '_keepers.csv'
-        shots_name = home + '_' + away + '_shots.csv'
+        players_name = match_index + '_' + home + '_' + away + '_players.csv'
+        keepers_name = match_index + '_' + home + '_' + away + '_keepers.csv'
+        shots_name = match_index + '_' + home + '_' + away + '_shots.csv'
 
         # check if this file should be processed or not
-        if (players_name in s3_players) and (keepers_name in s3_keepers) and (shots_name in s3_shots):
-            continue
+        # if (players_name in s3_players) and (keepers_name in s3_keepers) and (shots_name in s3_shots):
+        #     continue
 
         # get game data
         game_tables = pd.read_html(v['match_link'])
 
-        # process players
-        process_players(
-            game_tables[3:9],
-            game_tables[10:16],
-            home,
-            away,
-            v['match_id'],
-            league_dir + '/player_data/' + players_name
-        )
-        break
+        if players_name not in s3_players:
+            # process players
+            process_players(
+                game_tables[3:9],
+                game_tables[10:16],
+                v['squad_a'],
+                v['squad_b'],
+                v['match_id'],
+                league_dir + '/player_data/' + players_name
+            )
 
+        if keepers_name not in s3_keepers:
+            # process keepers
+            process_keepers(
+                game_tables[9],
+                game_tables[16],
+                v['squad_a'],
+                v['squad_b'],
+                v['match_id'],
+                league_dir + '/keeper_data/' + keepers_name
+            )
+
+        if shots_name not in s3_shots:
+            # process shots
+            process_shots(
+                game_tables[17],
+                v['squad_a'],
+                v['squad_b'],
+                v['match_id'],
+                league_dir + '/shot_data/' + shots_name
+            )`
 
 def process_league(soup):
     season = soup.find('h2').find('span').text.split(' ')[0]

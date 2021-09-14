@@ -229,3 +229,125 @@ JavaScript warning: https://pagead2.googlesyndication.com/bg/HSEgpNPNZLMKNnVg9QE
 JavaScript warning: https://pagead2.googlesyndication.com/bg/HSEgpNPNZLMKNnVg9QEjg_uljD9VTI4VvILwbC8qF_I.js line 1 > eval line 1541 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
 1631595575181	Marionette	INFO	Stopped listening on port 56904
+1631631179924	geckodriver	INFO	Listening on 127.0.0.1:57313
+1631631180903	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofilelx0k8t"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631631194728	Marionette	INFO	Listening on port 57320
+1631631195095	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 1528 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 1528 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1631631202554	Marionette	INFO	Stopped listening on port 57320
+1631635851324	geckodriver	INFO	Listening on 127.0.0.1:55345
+1631635852326	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofile7MuQKG"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631635865757	Marionette	INFO	Listening on port 55357
+1631635865885	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 7034 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 7034 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1631635876689	Marionette	INFO	Stopped listening on port 55357
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1631636864590	geckodriver	INFO	Listening on 127.0.0.1:56539
+1631636865684	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofileTOiaXV"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631636870014	Marionette	INFO	Listening on port 56546
+1631636870059	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 5731 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 5731 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1631636877542	Marionette	INFO	Stopped listening on port 56546
+1631636925086	geckodriver	INFO	Listening on 127.0.0.1:56707
+1631636926285	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofilexRwxjD"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631636932194	Marionette	INFO	Listening on port 56714
+1631636932266	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 2145 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 2145 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1631636944236	Marionette	INFO	Stopped listening on port 56714
+1631637414565	geckodriver	INFO	Listening on 127.0.0.1:56971
+1631637415576	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofileFooPkT"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631637419544	Marionette	INFO	Listening on port 56978
+1631637419635	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 5161 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 5161 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1631637428334	Marionette	INFO	Stopped listening on port 56978
+1631637943087	geckodriver	INFO	Listening on 127.0.0.1:57185
+1631637944120	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofilez9Wb73"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631637950078	Marionette	INFO	Listening on port 57195
+1631637950196	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 726))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 376))
+1631641349244	geckodriver	INFO	Listening on 127.0.0.1:57570
+1631641350339	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofilegk7ZJo"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631641354383	Marionette	INFO	Listening on port 57577
+1631641354475	Marionette	WARN	TLS certificate errors will be ignored for this session
+1631641359094	Marionette	INFO	Stopped listening on port 57577
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 2510 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 2510 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 716: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1631650996588	geckodriver	INFO	Listening on 127.0.0.1:58211
+1631650997603	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofilexLk5FH"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631651001927	Marionette	INFO	Listening on port 58220
+1631651002051	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 5510 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 5510 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1631651006740	Marionette	INFO	Stopped listening on port 58220
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1631651028526	geckodriver	INFO	Listening on 127.0.0.1:58357
+1631651029539	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofilenX5tT4"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631651034271	Marionette	INFO	Listening on port 58364
+1631651034341	Marionette	WARN	TLS certificate errors will be ignored for this session
+1631651038709	Marionette	INFO	Stopped listening on port 58364
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 3622 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 3622 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofilenX5tT4/protections.sqlite
+1631651258356	geckodriver	INFO	Listening on 127.0.0.1:58511
+1631651259364	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofileq4Hn9s"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631651263434	Marionette	INFO	Listening on port 58518
+1631651263549	Marionette	WARN	TLS certificate errors will be ignored for this session
+1631651267154	Marionette	INFO	Stopped listening on port 58518
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 5414 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 5414 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofileq4Hn9s/protections.sqlite
+1631651422020	geckodriver	INFO	Listening on 127.0.0.1:58685
+1631651423032	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/n8/xjv945bd3w598q07lq0gzct00000gn/T/rust_mozprofileikKLwV"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1631651426494	Marionette	INFO	Listening on port 58692
+1631651426538	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 6754 > eval line 1 > eval, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://pagead2.googlesyndication.com/bg/63nx1wftg6VHOR-tiT7SbUA_tgXQN9sjUf-d_JpEnTc.js line 1 > eval line 6754 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1631651431658	Marionette	INFO	Stopped listening on port 58692
