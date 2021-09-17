@@ -41,4 +41,7 @@ bucket - ykfbref
 --> keeper_data.csv
 ---> home_away_keepers.csv
 
-still need match description data but it's not super necessary, this could just be a simple excel file
+still need match description data but it's not super necessary, this could just be a simple csv file
+
+-- 20210916
+add match description csv file

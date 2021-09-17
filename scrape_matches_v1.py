@@ -336,7 +336,8 @@ def process_matches(match_data, league_dir):
     s3_players = s3_loaded_data(league_dir, 'player_data')
     s3_keepers = s3_loaded_data(league_dir, 'keeper_data')
     s3_shots = s3_loaded_data(league_dir, 'shot_data')
-
+    
+    new_games = False
     for k, v in match_data.items():
         match_index = str(k + 1).zfill(3)
         home = ''.join(v['squad_a'].split(' '))
@@ -347,9 +348,9 @@ def process_matches(match_data, league_dir):
         keepers_name = match_index + '_' + home + '_' + away + '_keepers.csv'
         shots_name = match_index + '_' + home + '_' + away + '_shots.csv'
 
-        # check if this file should be processed or not
-        # if (players_name in s3_players) and (keepers_name in s3_keepers) and (shots_name in s3_shots):
-        #     continue
+        # check if we have at least one more new match from the previous insert
+        if (players_name not in s3_players) or (keepers_name not in s3_keepers) or (shots_name not in s3_shots):
+            new_games = True
 
         # get game data
         game_tables = pd.read_html(v['match_link'])
@@ -385,6 +386,12 @@ def process_matches(match_data, league_dir):
                 v['match_id'],
                 league_dir + '/shot_data/' + shots_name
             )
+    
+    if new_games:
+        upload_df_to_s3(
+            pd.DataFrame(match_data.values()),
+            league_dir + "/match_info/match_info.csv"
+        )
 
 def process_league(soup):
     season = soup.find('h2').find('span').text.split(' ')[0]
@@ -430,9 +437,10 @@ def process_league(soup):
         
         match_num += 1
 
+    print("{} matches processed.".format(match_num))
     return match_data
 
-def main():
+def scrape_html():
     # league details
     league_url = 'https://fbref.com/en/comps/9/schedule/Premier-League-Scores-and-Fixtures'
     league_dir = 'pl_2021_22'
@@ -450,9 +458,7 @@ def main():
 
     # get match details (links, ids, etc)
     match_data = process_league(soup)
-    process_matches(match_data, league_dir, )
-
+    process_matches(match_data, league_dir)
 
 if __name__ == '__main__':
-    main()
-    
+    scrape_html()
